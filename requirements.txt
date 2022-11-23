@@ -1,1 +1,2 @@
 rembg==2.0.25
+google-cloud==0.34.0
