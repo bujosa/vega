@@ -1,4 +1,3 @@
-import os
 import base64
 from functions.download import download_image
 from functions.removebg import removebg
@@ -12,8 +11,13 @@ def receive_removebg_picture_call(event, context):
     """
     pubsub_message = base64.b64decode(event['data']).decode('utf-8')
     print(pubsub_message)
+
+    """ Download image and remove background process"""
     input = download_image(pubsub_message.url)
     output = removebg(input)
+
+
     storage = Storage(pubsub_message.url, output)
-    storage.remove_background()
-    os.remove(output)
+    """ This part is optional, because it is a custom logic to replace the existing
+     image file and upload it with the same one but without background"""
+    storage.remove_background() 

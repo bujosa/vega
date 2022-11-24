@@ -18,6 +18,7 @@ class Storage:
         """Changes picture in storage to a new without background"""
         self.__remove()
         self.__upload()
+        os.remove(self.path)
 
     def __upload(self):
         """Upload image to a cloud storage"""
