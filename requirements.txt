@@ -1,2 +1,3 @@
 rembg==2.0.25
 google-cloud-pubsub==2.13.11
+google-cloud-storage==2.6.0
