@@ -23,4 +23,5 @@ def receive_removebg_picture_call(event, context):
     
     # Step 4 (optional) -> This part is optional, because it is a custom logic to 
     # replace the existingimage file and upload it with the same one but without background
-    storage.remove_background() 
+    storage.remove_background()
+ 
